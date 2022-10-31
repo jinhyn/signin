@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    아이디<br><input type="email" id="userid" name="email" >
+</body>
+<script>
+
+    let id1 = document.getElementById('userid');
+
+    id1.addEventListener('change',(e)=>{  // html 의 onchange="validEmail(this)"와 동일 
+    validEmail(e.target)
+})
+
+function validEmail(obj){
+    console.log(obj)
+    if(validEmailCheck(obj)==true){
+        alert('올바른 주소.')
+        return true;
+    }
+    else
+    {
+        alert('올바른 이메일 주소를 입력해주세요.')
+        obj.value='';
+        obj.focus();
+    }
+    
+}
+
+function validEmailCheck(obj){
+    var pattern = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+    return (obj.value.match(pattern)!=null)
+}
+    </script>
+</html>

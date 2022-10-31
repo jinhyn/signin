@@ -1,0 +1,21 @@
+
+#boder{
+  position: absolute;
+  padding: 50px;
+  border : 1px solid;
+  top:50%;left:50%;
+  box-sizing: border-box;
+  transform: translate(-50%, -50%);
+  background-color: #1962b6;
+}
+@media (max-width: 800px) {
+    #boder {
+    position: absolute;
+    padding: 50px;
+    border : 1px solid;
+    top:50%;left:50%;
+    box-sizing: border-box;
+    transform: translate(-50%, -50%);
+    background-color: #30aa2c;
+    }
+  }
