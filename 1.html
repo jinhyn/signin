@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+ 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button id="dog">강아지</button>
+  <div class="dogs"></div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> 
+<script>  
+
+const button = document.querySelector("#dog")
+const url = 'https://api.thecatapi.com/v1/images/search?size=full'
+
+const getDogImages = function() {
+  axios.get(url).then(
+    (response) => {
+      const imgURL = response.data.message;
+      const dogImage = document.createElement("img")
+      dogImage.src = imgURL;
+  
+      document.querySelector(".dogs").appendChild(dogImage);
+  })
+}
+button.addEventListener("click", getDogImages)
+
+axios.get(API_URL)  // axios-> promise 반환
+      .then((response) => {  //promise 성공시
+        const imgUrl = response.data[0].url
+        this.catImgUrl = imgUrl
+      })
+</script>
+
+
+</html>

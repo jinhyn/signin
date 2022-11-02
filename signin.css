@@ -6,7 +6,7 @@
   top:50%;left:50%;
   box-sizing: border-box;
   transform: translate(-50%, -50%);
-  background-color: #1962b6;
+
 }
 @media (max-width: 800px) {
     #boder {
@@ -16,6 +16,6 @@
     top:50%;left:50%;
     box-sizing: border-box;
     transform: translate(-50%, -50%);
-    background-color: #30aa2c;
+  
     }
   }
