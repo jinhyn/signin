@@ -1,0 +1,21 @@
+.container{
+  position: absolute;
+  padding: 50px;
+  border : 1px solid;
+  top:50%;left:50%;
+  box-sizing: border-box;
+  transform: translate(-50%, -50%);
+  background-color: #1962b6;
+}
+
+@media (max-width: 800px) {
+    .container {
+      position: absolute;
+      padding: 50px;
+      border : 1px solid;
+      top:50%;left:50%;
+      box-sizing: border-box;
+      transform: translate(-50%, -50%);
+      background-color: #2c8b52;
+    }
+  }
